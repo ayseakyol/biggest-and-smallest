@@ -1,14 +1,8 @@
-# Project of DuckDuckClone
+# Project of Biggest-Smallest
 
 ## Description
 
 I completed this project with stepping through in the debugger. Finding my false with the help of debugging is very helpful for me. I used **HTML5, CSS3, Java-Script**.
-
-## Visual
-
-This is the main page of the project:
-
-![]()
 
 ## Installation
 
