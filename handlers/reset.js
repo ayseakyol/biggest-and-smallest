@@ -2,6 +2,8 @@ function resetHandler() {
   debugger;
   // reset state to initial values
   numbers.current = 0;
+  numbers.biggest = -Infinity;
+  numbers.smallest = Infinity;
   numbers.past = [];
   // re-render UI with values saved in state
   document.getElementById("biggest").innerHTML = -Infinity;
