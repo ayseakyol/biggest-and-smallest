@@ -4,7 +4,7 @@ function resetHandler() {
   numbers.current = 0;
   numbers.biggest = -Infinity;
   numbers.smallest = Infinity;
-  numbers.past = [];
+  numbers.all = [];
   // re-render UI with values saved in state
   document.getElementById("biggest").innerHTML = numbers.biggest;
   document.getElementById("smallest").innerHTML = numbers.smallest;
