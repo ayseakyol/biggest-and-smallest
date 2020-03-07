@@ -1,18 +1,23 @@
 function saveNumberHandler() {
   debugger;
   // read new number from user input
-  const x = document.getElementById("input").value;
+  const newCurrent = Number(document.getElementById("input").value);
   // read from state the data you will need for the next step
-  numbers.all.push(numbers.current);
+  const oldCurrent = numbers.current;
+  const oldBiggest = numbers.biggest;
+  const oldSmallest = numbers.smallest;
   // find the new biggest and smallest values
-  if (x < numbers.smallest) {
-    numbers.smallest = x;
+  if (newCurrent < numbers.smallest) {
+    numbers.smallest = newCurrent;
   }
-  if (x > numbers.biggest) {
-    numbers.biggest = x;
+  if (newCurrent > numbers.biggest) {
+    numbers.biggest = newCurrent;
   }
   // update state: new biggest, new smallest, new current & save the last current
-  let newInput = x;
+  numbers.biggest = newBiggest;
+  numbers.smallest = newSmallest;
+  numbers.current = newCurrent;
+  numbers.all.push(oldCurrent);
   // re-render the user interface with values stored in state
   document.getElementById("biggest").innerHTML = numbers.biggest;
   document.getElementById("smallest").innerHTML = numbers.smallest;
