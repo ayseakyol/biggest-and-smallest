@@ -6,8 +6,8 @@ function resetHandler() {
   numbers.smallest = Infinity;
   numbers.past = [];
   // re-render UI with values saved in state
-  document.getElementById("biggest").innerHTML = -Infinity;
-  document.getElementById("smallest").innerHTML = Infinity;
+  document.getElementById("biggest").innerHTML = numbers.biggest;
+  document.getElementById("smallest").innerHTML = numbers.smallest;
   document.getElementById("input").value = numbers.current;
   // log interaction: handler name, new state
   log.push({
