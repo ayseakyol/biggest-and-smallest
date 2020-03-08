@@ -9,7 +9,6 @@ function saveNumberHandler() {
   // find the new biggest and smallest values
   const newBiggest = Math.max(oldBiggest, newCurrent);
   const newSmallest = Math.min(oldSmallest, newCurrent);
-
   // update state: new biggest, new smallest, new current & save the last current
   numbers.biggest = newBiggest;
   numbers.smallest = newSmallest;
