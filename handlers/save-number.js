@@ -14,13 +14,15 @@ function saveNumberHandler() {
   numbers.smallest = newSmallest;
   numbers.current = newCurrent;
   numbers.all.push(oldCurrent);
+
   // re-render the user interface with values stored in state
   document.getElementById("biggest").innerHTML = numbers.biggest;
   document.getElementById("smallest").innerHTML = numbers.smallest;
+
   // log user interaction: handler name, user input, new state
   log.push({
     handler: "save number",
-    newInput,
+    newInput: newCurrent,
     numbers: JSON.parse(JSON.stringify(numbers))
   });
 }
