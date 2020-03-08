@@ -2,10 +2,12 @@ function resetHandler() {
   debugger;
   // reset state to initial values
   numbers.current = 0;
-  numbers.past = [];
+  numbers.biggest = -Infinity;
+  numbers.smallest = Infinity;
+  numbers.all = [];
   // re-render UI with values saved in state
-  document.getElementById("biggest").innerHTML = -Infinity;
-  document.getElementById("smallest").innerHTML = Infinity;
+  document.getElementById("biggest").innerHTML = numbers.biggest;
+  document.getElementById("smallest").innerHTML = numbers.smallest;
   document.getElementById("input").value = numbers.current;
   // log interaction: handler name, new state
   log.push({
